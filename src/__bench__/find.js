@@ -23,33 +23,33 @@ const doc = {
 };
 
 suite
-  .add(`find`, function () {
+  .add(`find`, () => {
     const pointer = parseJsonPointer('/foo/bar/0/baz');
     find(doc, pointer);
   })
-  .add(`find ES5`, function () {
+  .add(`find ES5`, () => {
     const pointer = parseJsonPointerEs5('/foo/bar/0/baz');
     findEs5(doc, pointer);
   })
-  .add(`findByPointer (v1)`, function () {
+  .add(`findByPointer (v1)`, () => {
     findByPointerV1('/foo/bar/0/baz', doc);
   })
-  .add(`findByPointer (v2)`, function () {
+  .add(`findByPointer (v2)`, () => {
     findByPointerV2('/foo/bar/0/baz', doc);
   })
-  .add(`findByPointer (v3)`, function () {
+  .add(`findByPointer (v3)`, () => {
     findByPointerV3('/foo/bar/0/baz', doc);
   })
-  .add(`findByPointer (v4)`, function () {
+  .add(`findByPointer (v4)`, () => {
     findByPointerV4('/foo/bar/0/baz', doc);
   })
-  .add(`findByPointer (v5)`, function () {
+  .add(`findByPointer (v5)`, () => {
     findByPointerV5('/foo/bar/0/baz', doc);
   })
-  .add(`findByPointer (v6)`, function () {
+  .add(`findByPointer (v6)`, () => {
     findByPointerV6('/foo/bar/0/baz', doc);
   })
-  .on('cycle', function (event) {
+  .on('cycle', (event) => {
     console.log(String(event.target));
   })
   .on('complete', function () {

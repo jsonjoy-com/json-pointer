@@ -1,4 +1,4 @@
-import {hasOwnProperty} from '@jsonjoy.com/util/lib/hasOwnProperty';
+import {hasOwnProperty as has} from '@jsonjoy.com/util/lib/hasOwnProperty';
 import type {Path} from './types';
 
 export const get = (val: unknown, path: Path): unknown | undefined => {
@@ -15,7 +15,7 @@ export const get = (val: unknown, path: Path): unknown | undefined => {
       if (key < 0) return undefined;
       val = val[key];
     } else if (typeof val === 'object') {
-      if (!val || !hasOwnProperty(val as object, key as string)) return undefined;
+      if (!val || !has(val as object, key as string)) return undefined;
       val = (val as any)[key];
     } else return undefined;
   }

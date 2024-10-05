@@ -1,5 +1,5 @@
 import {test, expect} from 'vitest';
-import {Path, Reference} from '..';
+import type {Path, Reference} from '..';
 import {isArrayReference, isArrayEnd} from '../find';
 import {parseJsonPointer} from '../util';
 

@@ -1,6 +1,6 @@
 /* tslint:disable no-string-throw */
 
-import {hasOwnProperty} from '@jsonjoy.com/util/lib/hasOwnProperty';
+import {hasOwnProperty as has} from '@jsonjoy.com/util/lib/hasOwnProperty';
 import type {Path} from './types';
 
 export interface Reference {
@@ -59,7 +59,7 @@ export const find = (val: unknown, path: Path): Reference => {
       }
       val = obj[key];
     } else if (typeof obj === 'object' && !!obj) {
-      val = hasOwnProperty(obj, key as string) ? (obj as any)[key] : undefined;
+      val = has(obj, key as string) ? (obj as any)[key] : undefined;
     } else throw new Error('NOT_FOUND');
   }
   const ref: Reference = {val, obj, key};

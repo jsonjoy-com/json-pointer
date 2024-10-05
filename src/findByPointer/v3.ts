@@ -1,5 +1,5 @@
-import {hasOwnProperty} from '@jsonjoy.com/util/lib/hasOwnProperty';
-import {Reference} from '../find';
+import {hasOwnProperty as has} from '@jsonjoy.com/util/lib/hasOwnProperty';
+import type {Reference} from '../find';
 import {isInteger, unescapeComponent} from '../util';
 
 const {isArray} = Array;
@@ -8,7 +8,7 @@ export const findByPointer = (pointer: string, val: unknown): Reference => {
   if (!pointer) return {val};
   let obj: Reference['obj'];
   let key: Reference['key'];
-  let indexOfSlash: number = 0;
+  let indexOfSlash = 0;
   pointer = pointer.substr(1);
   while (pointer) {
     indexOfSlash = pointer.indexOf('/');
@@ -29,9 +29,9 @@ export const findByPointer = (pointer: string, val: unknown): Reference => {
         key = Number(key);
         if (key < 0) throw new Error('INVALID_INDEX');
       }
-      val = hasOwnProperty(obj, String(key)) ? obj[key] : undefined;
+      val = has(obj, String(key)) ? obj[key] : undefined;
     } else if (typeof obj === 'object' && !!obj) {
-      val = hasOwnProperty(obj, String(key)) ? (obj as any)[key] : undefined;
+      val = has(obj, String(key)) ? (obj as any)[key] : undefined;
     } else throw new Error('NOT_FOUND');
   }
   return {val, obj, key};

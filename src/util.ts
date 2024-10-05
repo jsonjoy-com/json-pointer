@@ -85,14 +85,14 @@ export function parent(path: Path): Path {
  */
 export function isValidIndex(index: string | number): boolean {
   if (typeof index === 'number') return true;
-  const n = parseInt(index, 10);
+  const n = Number.parseInt(index, 10);
   return String(n) === index && n >= 0;
 }
 
 export const isInteger = (str: string): boolean => {
   const len = str.length;
   let i = 0;
-  let charCode;
+  let charCode: any;
   while (i < len) {
     charCode = str.charCodeAt(i);
     if (charCode >= 48 && charCode <= 57) {
