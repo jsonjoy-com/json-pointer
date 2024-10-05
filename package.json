@@ -43,7 +43,7 @@
     "clean": "npx rimraf@6.0.1 lib typedocs coverage gh-pages yarn-error.log",
     "build": "tsc --project tsconfig.build.json --module commonjs --target es2020 --outDir lib",
     "test": "vitest ./src",
-    "coverage": "yarn test --collectCoverage",
+    "coverage": "vitest run --coverage",
     "typedoc": "npx typedoc@0.25.13 --tsconfig tsconfig.build.json",
     "build:pages": "npx rimraf@6.0.1 gh-pages && mkdir -p gh-pages && cp -r typedocs/* gh-pages && cp -r coverage gh-pages/coverage",
     "deploy:pages": "gh-pages -d gh-pages",
@@ -58,6 +58,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
     "@types/benchmark": "^2.1.5",
+    "@vitest/coverage-v8": "^2.1.2",
     "benchmark": "^2.1.4",
     "config-galore": "^1.0.0",
     "tslib": "^2.7.0",
