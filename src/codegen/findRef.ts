@@ -35,7 +35,7 @@ export const $$findRef = (path: Path): JavaScriptLinked<Fn> => {
     `;
   }
 
-  const js = /* js */ `(function(hasOwnProperty, path){
+  const js = /* js */ `(function(has, path){
     return function(val) {
       var obj, key;
       ${loop}
