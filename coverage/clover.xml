@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1728127319017" clover="3.2.0">
-  <project timestamp="1728127319017" name="All files">
-    <metrics statements="544" coveredstatements="283" conditionals="178" coveredconditionals="160" methods="37" coveredmethods="22" elements="759" coveredelements="465" complexity="0" loc="544" ncloc="544" packages="6" files="23" classes="23"/>
+<coverage generated="1751045383282" clover="3.2.0">
+  <project timestamp="1751045383282" name="All files">
+    <metrics statements="545" coveredstatements="305" conditionals="193" coveredconditionals="174" methods="37" coveredmethods="23" elements="775" coveredelements="502" complexity="0" loc="545" ncloc="545" packages="6" files="23" classes="23"/>
     <package name="src">
-      <metrics statements="140" coveredstatements="85" conditionals="53" coveredconditionals="49" methods="19" coveredmethods="14"/>
+      <metrics statements="141" coveredstatements="107" conditionals="68" coveredconditionals="63" methods="19" coveredmethods="15"/>
       <file name="find.ts" path="/home/runner/work/json-pointer/json-pointer/src/find.ts">
         <metrics statements="35" coveredstatements="34" conditionals="18" coveredconditionals="17" methods="4" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
@@ -43,28 +43,29 @@
         <line num="88" count="0" type="stmt"/>
       </file>
       <file name="get.ts" path="/home/runner/work/json-pointer/json-pointer/src/get.ts">
-        <metrics statements="21" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="22" coveredstatements="22" conditionals="16" coveredconditionals="14" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="7" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="18" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="32" type="stmt"/>
+        <line num="10" count="32" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="32" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="19" type="stmt"/>
+        <line num="21" count="21" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="32" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="13" type="stmt"/>
+        <line num="24" count="13" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/runner/work/json-pointer/json-pointer/src/index.ts">
         <metrics statements="7" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -86,7 +87,7 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="154" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="167" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="5" type="stmt"/>
         <line num="14" count="5" type="stmt"/>
         <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -94,9 +95,9 @@
         <line num="21" count="3" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="21" type="cond" truecount="2" falsecount="0"/>
-        <line num="31" count="20" type="stmt"/>
-        <line num="32" count="20" type="stmt"/>
+        <line num="29" count="27" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="26" type="stmt"/>
+        <line num="32" count="26" type="stmt"/>
         <line num="38" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="40" count="4" type="cond" truecount="1" falsecount="0"/>
