@@ -8,11 +8,12 @@ export const get = (val: unknown, path: Path): unknown | undefined => {
   for (let i = 0; i < pathLength; i++) {
     key = path[i];
     if (val instanceof Array) {
-      if (key === '-') return undefined;
-      const key2 = ~~key;
-      if ('' + key2 !== key) return undefined;
-      key = key2;
-      if (key < 0) return undefined;
+      if (typeof key !== 'number') {
+        if (key === '-') return undefined;
+        const key2 = ~~key;
+        if ('' + key2 !== key) return undefined;
+        key = key2;
+      }
       val = val[key];
     } else if (typeof val === 'object') {
       if (!val || !has(val as object, key as string)) return undefined;
